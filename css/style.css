@@ -1,76 +1,90 @@
 :root {
-    --gris:#7c7c7c;
+    --gris: #7c7c7c;
     --blanco: #FFFFFF;
-    --negro:#1F1E1E;
+    --negro: #1F1E1E;
+    --background-color: #1d1d20;
     --grisClaro: #E1E1E1;
 
-    --separacion:3rem;
+    --separacion: 3rem;
 
-    --fuentePrincipal: 'Oswald', sans-serif;
+    --fuentePrincipal: 'Quicksand', sans-serif;
 }
+
 html {
     font-size: 62.5%;
     box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
+
 body {
     font-family: var(--fuentePrincipal);
     font-size: 1.6rem;
     line-height: 1.8;
     margin: 0 auto;
 }
+
 /** GLOBALES **/
 .contenedor {
     max-width: 120rem;
     width: 90%;
 }
-.header__container {
-    max-width: 120rem;
-    width: 90%;
-    margin: 0 auto;
-}
-.text-center {
-    text-align: center;
-}
-h1, h2, h3 {
+
+h1,
+h2,
+h3 {
     font-weight: 700;
     margin: 2rem 0;
 }
+
 h1 {
     font-size: 5rem;
 }
+
 h2 {
     font-size: 4.6rem;
 }
+
 h3 {
     font-size: 3rem;
 }
+
 a {
     text-decoration: none;
 }
+
 img {
     max-width: 100%;
     display: block;
 }
-a {
-    text-decoration: none;
-}
 
+/** UTILIDADES **/
+.text-center {
+    text-align: center;
+}
 
 /** HEADER **/
-.header{
+.header {
     display: block;
-    background-color: var(--negro);
+    background-color: var(--background-color);
     color: var(--blanco);
 }
+
 .header__container {
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
     padding: calc(var(--separacion) * 3) 0;
 }
+
 .header__photo {
     padding: 50px 0;
 }
+
 .header__photo--circle {
     display: block;
     width: 20rem;
@@ -80,12 +94,14 @@ a {
     margin: 0 auto;
     border-radius: 10rem;
 }
-.header__title--name{
+
+.header__title--name {
     margin: 1rem 0;
     font-size: 3.5rem;
-    font-weight:300;
+    font-weight: 300;
 }
-.header__title--carrer{
+
+.header__title--carrer {
     display: block;
     line-height: 1.2em;
     color: var(--grisClaro);
@@ -93,23 +109,30 @@ a {
     font-size: 2rem;
     font-weight: 300;
 }
+
 .header__title--carrer a {
     color: var(--gris);
 }
+
 .icono {
     margin: 1rem;
 }
+
 .icono:hover {
     color: var(--grisClaro);
 }
 
+
+
+
 /** HEADER NAV **/
-.nav > li > a {
+.nav>li>a {
     position: relative;
     display: block;
     padding: 10px 15px;
 }
-.header__menu{
+
+.header__menu {
     position: relative;
     z-index: 1000;
     min-height: 50px;
@@ -120,14 +143,18 @@ a {
     background-clip: padding-box;
     width: 100%;
 }
+
 .header__menu--default {
     background-color: var(--blanco);
     border-color: var(--gris);
 }
-.header__menu:before, .header__menu:after {
+
+.header__menu:before,
+.header__menu:after {
     display: table;
     content: " ";
 }
+
 .header__menu--default .header__menu--barra {
     border-color: var(--grisClaro);
 }
@@ -138,16 +165,19 @@ a {
     text-align: center;
     text-transform: uppercase;
 }
-.header__menu--barra .header__menu--nav > li {
+
+.header__menu--barra .header__menu--nav>li {
     float: none;
     display: inline-block;
 }
-.header__menu--barra .header__menu--nav > li > a {
+
+.header__menu--barra .header__menu--nav>li>a {
     padding: 20px 30px;
     line-height: 20px;
     color: var(--negro);
 }
-.header__menu--barra .header__menu--nav > li > a:before{
+
+.header__menu--barra .header__menu--nav>li>a:before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -167,14 +197,16 @@ a {
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
 }
-.header__menu--barra .header__menu--nav > li > a:hover, 
-.header__menu--barra .header__menu--nav > li > a:focus, 
-.header__menu--barra .header__menu--nav > li > a:active {
+
+.header__menu--barra .header__menu--nav>li>a:hover,
+.header__menu--barra .header__menu--nav>li>a:focus,
+.header__menu--barra .header__menu--nav>li>a:active {
     color: var(--blanco);
 }
-.header__menu--barra .header__menu--nav > li > a:hover:before, 
-.header__menu--barra .header__menu--nav > li > a:focus:before, 
-.header__menu--barra .header__menu--nav > li > a:active:before {
+
+.header__menu--barra .header__menu--nav>li>a:hover:before,
+.header__menu--barra .header__menu--nav>li>a:focus:before,
+.header__menu--barra .header__menu--nav>li>a:active:before {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
     -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
